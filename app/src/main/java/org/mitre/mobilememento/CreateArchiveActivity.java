@@ -116,22 +116,19 @@ public class CreateArchiveActivity extends ActionBarActivity
                 Log.e("Exception", "", e);
                 //Toast.makeText(CreateArchiveActivity.this, "Upload failed!", Toast.LENGTH_SHORT).show();
             }
-
         }
     }
 
-    private class SubmitToArchiveTodayThread implements Runnable
-    {
+    private class SubmitToArchiveTodayThread implements Runnable {
+
         private final String url;
 
-        SubmitToArchiveTodayThread(String url)
-        {
+        SubmitToArchiveTodayThread(String url) {
             this.url = url;
         }
 
         @Override
-        public void run()
-        {
+        public void run() {
             HttpURLConnection connection = null;
             try {
                 HttpURLConnection.setFollowRedirects(true);

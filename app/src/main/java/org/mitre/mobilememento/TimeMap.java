@@ -38,7 +38,7 @@ public class TimeMap implements Comparator<Memento> {
     public static TimeMap newInstance(String contentURL, String httpResult, ScreenType screenType) {
         TimeMap database = new TimeMap(contentURL, screenType);
 
-        for(String record : httpResult.split("\n,")) {
+        for(String record : httpResult.split(",\n")) {
             try {
                 if(record.indexOf('<') != -1 && record.indexOf("/>") != -1 && record.indexOf("datetime=\"") != -1)
                     database.mementos.add(new Memento(contentURL, record, screenType));
