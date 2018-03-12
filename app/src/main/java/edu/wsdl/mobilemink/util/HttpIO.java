@@ -28,12 +28,12 @@ public final class HttpIO
     };
 
     /**
-     * Queries the Los Alamos National Laboratory Memento server for the list of Mementos of a specific url.
+     * Queries the ODUCS MemGator/Memento aggregator for the list of Mementos of a specific URI-R.
      *
-     * @param urlToRead The resource URL to query the server for.
-     * @return A string containing the entire document HTML text
+     * @param urir The original URI for which we request mementos
+     * @return A string containing the Link-formatted TimeMap for the original URI
      */
-    public static final String getMementoHTML(String urlToRead)
+    public static final String getLinkTimeMap(String urir)
     {
         URL url;
         HttpURLConnection conn;
@@ -41,10 +41,12 @@ public final class HttpIO
         String line;
         StringBuilder result = new StringBuilder();
         try {
-            Log.d("MEMENTO_URL", urlToRead);
-            url = new URL("http://memgator.cs.odu.edu/timemap/link/" + urlToRead);
+            Log.d("MEMENTO_URL", urir);
+            url = new URL("http://memgator.cs.odu.edu/timemap/link/" + urir);
             conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
+            String memCount = conn.getHeaderField("X-Memento-Count");
+
             rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
             while ((line = rd.readLine()) != null) {
                 result.append(line).append("\n");

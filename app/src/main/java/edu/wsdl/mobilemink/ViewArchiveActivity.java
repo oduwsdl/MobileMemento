@@ -315,9 +315,8 @@ public class ViewArchiveActivity extends ActionBarActivity implements AdapterVie
             @Override
             public void run()
             {
-                Log.d("URL", url);
                 if (HttpIO.exists(url)) {
-                    myTimeMap = TimeMap.newInstance(url, HttpIO.getMementoHTML(url), screenType);
+                    myTimeMap = TimeMap.newInstance(url, HttpIO.getLinkTimeMap(url), screenType);
                     MobileMink.urls.add(url);
                 }
             }
