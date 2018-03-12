@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".SettingsActivity"
-            android:label="Mobile Mink" >
+            android:label="MobileMink" >
         </activity>
         <activity
             android:name=".CreateArchiveActivity"
