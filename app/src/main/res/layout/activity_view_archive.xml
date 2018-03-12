@@ -50,7 +50,7 @@
                 android:fontFamily="sans-serif-condensed"
                 android:gravity="center"
                 android:maxLines="3"
-                android:padding="8dp"
+                android:padding="4dp"
                 android:text="Jump to: "
                 android:textAppearance="@android:style/TextAppearance.DeviceDefault.Widget.ActionBar.Title"/>
 
