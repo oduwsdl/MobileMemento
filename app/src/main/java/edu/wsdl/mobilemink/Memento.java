@@ -5,6 +5,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
+import java.util.Calendar;
 
 /**
  * An individual record of archive of a given website.
@@ -107,13 +108,26 @@ public class Memento {
 
     /**
      * Custom comparator between two dates in mementos.
-     * @param date
+     * @param date1
      * @param date2
      * @return true if the two dates are equal.
      */
-    static boolean dateCompare(Date date, Date date2) {
-        return (date.getYear() == date2.getYear() &&
-                date.getMonth() == date2.getMonth() &&
-                date.getDate() == date2.getDate());
+    static boolean dateCompare(Date date1, Date date2) {
+        Calendar calendar1 = Calendar.getInstance();
+        Calendar calendar2 = Calendar.getInstance();
+
+        calendar1.setTime(date1);
+        calendar1.setTime(date2);
+
+        int d1Year = calendar1.get(Calendar.YEAR);
+        int d1Month = calendar1.get(Calendar.MONTH);
+        int d1Date = calendar1.get(Calendar.DATE);
+        int d2Year = calendar2.get(Calendar.YEAR);
+        int d2Month = calendar2.get(Calendar.MONTH);
+        int d2Date = calendar2.get(Calendar.DATE);
+
+        return (d1Year == d2Year &&
+                d1Month == d2Month &&
+                d1Date == d2Date);
     }
 }

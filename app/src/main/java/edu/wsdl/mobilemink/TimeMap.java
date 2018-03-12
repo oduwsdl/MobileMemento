@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.Calendar;
 
 /**
  * @author wes
@@ -61,8 +62,20 @@ public class TimeMap implements Comparator<Memento> {
      */
     public Integer[] getAvailableYears()
     {
-        Date curr = new Date(System.currentTimeMillis()), oldest = mementos.get(mementos.size() - 1).getDate();
-        Integer years[] = new Integer[curr.getYear() - oldest.getYear() + 1], y = curr.getYear();
+        Date curr = new Date(System.currentTimeMillis());
+        Date oldest = mementos.get(mementos.size() - 1).getDate();
+
+        Calendar currCalendar = Calendar.getInstance();
+        Calendar oldCalendar = Calendar.getInstance();
+        currCalendar.setTime(curr);
+        oldCalendar.setTime(oldest);
+
+        int currYear = currCalendar.get(Calendar.YEAR);
+        int oldYear = oldCalendar.get(Calendar.YEAR);
+
+
+        Integer years[] = new Integer[currYear - oldYear + 1];
+        Integer y = currYear;
 
         for (int i = 0; i < years.length; i++) {
             years[i] = y;
@@ -97,8 +110,9 @@ public class TimeMap implements Comparator<Memento> {
     public Memento[] query(Date date)
     {
         ArrayList<Memento> result = new ArrayList<Memento>();
-        for (Memento m : mementos)
+        for (Memento m : mementos) {
             if (Memento.dateCompare(m.getDate(), date)) result.add(m);
+        }
         return result.toArray(new Memento[result.size()]);
     }
 
@@ -107,7 +121,9 @@ public class TimeMap implements Comparator<Memento> {
      */
     public Date mostRecent()
     {
-        if (mementos.size() <= 0) return new Date(0);
+        if (mementos.size() <= 0) {
+            return new Date(0);
+        }
         Collections.sort(mementos, this);
         return mementos.get(0).getDate();
     }
@@ -141,7 +157,14 @@ public class TimeMap implements Comparator<Memento> {
         Collections.sort(mementos, this);
         for (int i = 0; i < mementos.size(); i++) {
             Date m = mementos.get(i).getDate();
-            if (m.getYear() <= year && m.getMonth() <= month) return i;
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(m);
+            int dYear = calendar.get(Calendar.YEAR);
+            int dMonth = calendar.get(Calendar.MONTH);
+
+            if (dYear <= year && dMonth <= month) {
+                return i;
+            }
         }
 
         return 0;

@@ -51,7 +51,6 @@ public class MementoArrayAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View oldView, ViewGroup viewGroup) {
-        //Log.d("AchiveSelectDialog", "D");
         Memento memento = mementos.get(i);
 
         View v = oldView;
@@ -59,12 +58,8 @@ public class MementoArrayAdapter extends BaseAdapter {
             v = View.inflate(context, R.layout.archive_list_element, null);
         }
 
-        //Log.d("AchiveSelectDialog", "E");
-
         ((TextView) v.findViewById(R.id.element_title)).setText(memento.getTime(DateFormat.getDateFormat(context)));
         ((ImageView) v.findViewById(R.id.screenBadge)).setImageResource(memento.getScreenType().getBadgeDrawable());
-
-        //Log.d("AchiveSelectDialog", "F");
 
         return v;
     }
