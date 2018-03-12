@@ -42,7 +42,7 @@ public final class HttpIO
         StringBuilder result = new StringBuilder();
         try {
             Log.d("MEMENTO_URL", urlToRead);
-            url = new URL("http://mobilemink.davidcthames.com/?n=10&url=" + urlToRead);
+            url = new URL("http://memgator.cs.odu.edu/timemap/link/" + urlToRead);
             conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
             rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
