@@ -60,9 +60,9 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_launch">MobileMink</string>
     <string name="directions">MobileMink allows you to quickly view archived captures (mementos) of a web page you are viewing.\n\nTo use MobileMink:\n\n1. Access a web page using a web browser.\n\n2. Select the Share menu then send the page to MobileMink.\n\n3. Select the date of the memento you wish to view.</string>
-    <string name="archive_is">Archive.Is</string>
+    <string name="archive_is">Archive.is</string>
     <string name="internet_archive">Internet Archive</string>
-    <string name="submit_for_archiving_at">Submit for archiving at:</string>
+    <string name="submit_for_archiving_at">Select archives and submit</string>
     <string name="web_cite">WebCite</string>
     <string name="perma_cc">Perma.cc</string>
     <string name="submit">SUBMIT</string>

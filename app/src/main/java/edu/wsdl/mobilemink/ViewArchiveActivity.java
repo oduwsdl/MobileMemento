@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
+import java.text.NumberFormat;
 
 /**
  * @author wes
@@ -292,7 +293,9 @@ public class ViewArchiveActivity extends ActionBarActivity implements AdapterVie
             timeMap = result;
             adapter.setTimeMap(timeMap);
             dialog.dismiss();
-            Toast.makeText(ViewArchiveActivity.this, "Found " + timeMap.size() + " Mementos", Toast.LENGTH_LONG).show();
+
+            String size = NumberFormat.getInstance().format(timeMap.size());
+            Toast.makeText(ViewArchiveActivity.this, "Found " + size + " Mementos", Toast.LENGTH_LONG).show();
 
             if(isOutdated()) showArchiveDialog();
         }

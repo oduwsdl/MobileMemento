@@ -18,7 +18,7 @@
         </activity>
         <activity
             android:name=".CreateArchiveActivity"
-            android:label="New Memento..."></activity>
+            android:label="Archive Web Page Now!"></activity>
         <activity
             android:name=".ViewArchiveActivity"
             android:label="View Mementos" >
