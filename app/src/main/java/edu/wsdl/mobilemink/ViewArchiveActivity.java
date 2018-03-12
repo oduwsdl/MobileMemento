@@ -1,4 +1,4 @@
-package org.mitre.mobilememento;
+package edu.wsdl.mobilemink;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -20,7 +20,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.mitre.mobilememento.util.HttpIO;
+import edu.wsdl.mobilemink.util.HttpIO;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;

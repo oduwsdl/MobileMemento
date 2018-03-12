@@ -1,13 +1,9 @@
-package org.mitre.mobilememento;
-
-import android.util.Log;
+package edu.wsdl.mobilemink;
 
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.TimeZone;
 
 /**

@@ -1,4 +1,4 @@
-package org.mitre.mobilememento;
+package edu.wsdl.mobilemink;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package org.mitre.mobilememento;
+package edu.wsdl.mobilemink;
 
 import java.util.LinkedList;
 

@@ -1,4 +1,4 @@
-package org.mitre.mobilememento;
+package edu.wsdl.mobilemink;
 
 /**
  * Created by wes on 12/18/14.

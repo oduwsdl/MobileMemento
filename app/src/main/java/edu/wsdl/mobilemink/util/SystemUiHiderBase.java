@@ -1,4 +1,4 @@
-package org.mitre.mobilememento.util;
+package edu.wsdl.mobilemink.util;
 
 import android.app.Activity;
 import android.view.View;
