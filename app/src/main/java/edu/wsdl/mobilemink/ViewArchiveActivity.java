@@ -232,7 +232,7 @@ public class ViewArchiveActivity extends ActionBarActivity implements AdapterVie
         protected void onPreExecute() {
             //Show this while content loads
             dialog = ProgressDialog.show(ViewArchiveActivity.this, "Fetching Mementos...",
-                    "Loading Mementos for this site... (This may take a few minutes)");
+                    "Loading mementos for this page...\n(This may take a few minutes)");
             dialog.setButton(DialogInterface.BUTTON_POSITIVE, "Cancel", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
