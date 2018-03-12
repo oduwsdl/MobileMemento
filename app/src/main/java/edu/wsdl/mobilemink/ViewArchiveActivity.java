@@ -251,7 +251,7 @@ public class ViewArchiveActivity extends ActionBarActivity implements AdapterVie
                 List<String> domains = HttpIO.getMobileDomains(strings[0]);
                 TimeMap[] maps = new TimeMap[domains.size()];
                 ArrayList<MementoGetter> threads = new ArrayList<MementoGetter>();
-                MobileMemento.urls.clear();
+                MobileMink.urls.clear();
                 ExecutorService threadPool = Executors.newCachedThreadPool();
 
                 for (int i = 0; i < domains.size(); i++) {
@@ -313,7 +313,7 @@ public class ViewArchiveActivity extends ActionBarActivity implements AdapterVie
                 Log.d("URL", url);
                 if (HttpIO.exists(url)) {
                     myTimeMap = TimeMap.newInstance(url, HttpIO.getMementoHTML(url), screenType);
-                    MobileMemento.urls.add(url);
+                    MobileMink.urls.add(url);
                 }
             }
 

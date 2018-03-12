@@ -54,7 +54,7 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="title_activity_launch">How to Use Mobile Mink</string>
-    <string name="directions">To use Mobile Mink, simply use any web browser to browse to the website you wish to view archives for, and then use the share menu to send the page to MobileMemento. Then, select the date of the memento you wish to view.</string>
+    <string name="directions">To use Mobile Mink, simply use any web browser to browse to the website you wish to view archives for, and then use the share menu to send the page to MobileMink. Then, select the date of the memento you wish to view.</string>
     <string name="archive_is">Archive.Is (aka Archive.Today)</string>
     <string name="internet_archive">Internet Archive (aka Wayback Machine)</string>
     <string name="submit_for_archiving_at">Submit for archiving at:</string>
