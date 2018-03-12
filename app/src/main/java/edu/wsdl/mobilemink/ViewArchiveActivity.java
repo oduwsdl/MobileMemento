@@ -262,7 +262,9 @@ public class ViewArchiveActivity extends ActionBarActivity implements AdapterVie
 
                 threadPool.shutdown();
                 threadPool.awaitTermination(10, TimeUnit.MINUTES);
-                for (int i = 0; i < threads.size(); i++) maps[i] = threads.get(i).getTimeMap();
+                for (int i = 0; i < threads.size(); i++) {
+                    maps[i] = threads.get(i).getTimeMap();
+                }
                 return TimeMap.union(maps);
 
             } catch (URISyntaxException e) {

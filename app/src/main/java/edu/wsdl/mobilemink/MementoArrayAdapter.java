@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.text.format.DateUtils;
 
 import java.util.ArrayList;
 
@@ -22,11 +23,14 @@ public class MementoArrayAdapter extends BaseAdapter {
     private ViewArchiveActivity context;
 
     public MementoArrayAdapter(ViewArchiveActivity context) {
-        //Log.d("AchiveSelectDialog", "C");
         this.context = context;
 
-        if(context.getTimeMap() != null) mementos = context.getTimeMap().getMementos();
-        else mementos = new ArrayList<Memento>();
+        if(context.getTimeMap() != null) {
+            mementos = context.getTimeMap().getMementos();
+        }
+        else {
+            mementos = new ArrayList<Memento>();
+        }
     }
 
     public void setTimeMap(TimeMap timeMap) {
@@ -58,6 +62,7 @@ public class MementoArrayAdapter extends BaseAdapter {
             v = View.inflate(context, R.layout.archive_list_element, null);
         }
 
+        //DateUtils.formatDateTime(context, epochTimeInMs, DateUtils.FORMAT_ABBREV_MONTH | DateUtils.FORMAT_SHOW_DATE);
         ((TextView) v.findViewById(R.id.element_title)).setText(memento.getTime(DateFormat.getDateFormat(context)));
         ((ImageView) v.findViewById(R.id.screenBadge)).setImageResource(memento.getScreenType().getBadgeDrawable());
 

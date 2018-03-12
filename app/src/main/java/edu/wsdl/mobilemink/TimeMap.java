@@ -31,8 +31,14 @@ public class TimeMap implements Comparator<Memento> {
     private TimeMap(TimeMap... others) {
         this.screenType = ScreenType.DESKTOP;
         if (others.length != 0) {
-            if(others[0] != null)   this.contentUrl = others[0].contentUrl; // Prevent accessor to invalid TM object
-            for (TimeMap map : others) if (map != null) mementos.addAll(map.getMementos());
+            if(others[0] != null) { // Prevent accessor to invalid TM object
+                this.contentUrl = others[0].contentUrl;
+            }
+            for (TimeMap map : others) {
+                if (map != null) {
+                    mementos.addAll(map.getMementos());
+                }
+            }
         }
     }
 
@@ -41,7 +47,7 @@ public class TimeMap implements Comparator<Memento> {
 
         for(String record : httpResult.split(",\n")) {
             try {
-                if(record.indexOf('<') != -1 && record.indexOf("/>") != -1 && record.indexOf("datetime=\"") != -1)
+                if(record.indexOf('<') != -1 && record.contains("/>") && record.contains("datetime=\""))
                     database.mementos.add(new Memento(contentURL, record, screenType));
             } catch (ParseException e) {
                 e.printStackTrace();
@@ -95,8 +101,15 @@ public class TimeMap implements Comparator<Memento> {
         boolean monthHasMemento[] = new boolean[12];
         Arrays.fill(monthHasMemento, false);
 
+        Date curr = new Date(System.currentTimeMillis());
+        Date oldest = mementos.get(mementos.size() - 1).getDate();
+
+        Calendar calendar = Calendar.getInstance();
+
         for (Memento m : mementos) {
-            monthHasMemento[m.getDate().getMonth()] = true;
+            calendar.setTime(m.getDate());
+            int month = calendar.get(Calendar.MONTH);
+            monthHasMemento[month] = true;
         }
 
         return monthHasMemento;
@@ -111,7 +124,9 @@ public class TimeMap implements Comparator<Memento> {
     {
         ArrayList<Memento> result = new ArrayList<Memento>();
         for (Memento m : mementos) {
-            if (Memento.dateCompare(m.getDate(), date)) result.add(m);
+            if (Memento.dateCompare(m.getDate(), date)) {
+                result.add(m);
+            }
         }
         return result.toArray(new Memento[result.size()]);
     }

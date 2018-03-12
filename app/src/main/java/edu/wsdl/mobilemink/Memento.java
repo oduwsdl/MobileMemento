@@ -73,7 +73,11 @@ public class Memento {
      * @return A <code>String</code> containing the formatted date
      */
     public String getTime(DateFormat format) {
-        return format.format(date) + " GMT";
+        DateFormat df = new SimpleDateFormat("MMM d, yyyy HH:mm:ss");
+        String reportDate = df.format(date);
+
+        //return format.format(date) + " GMT";
+        return reportDate + " GMT";
     }
 
     public ScreenType getScreenType() {
