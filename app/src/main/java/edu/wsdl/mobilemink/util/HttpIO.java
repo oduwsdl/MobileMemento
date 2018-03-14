@@ -44,6 +44,7 @@ public final class HttpIO
             Log.d("MEMENTO_URL", urir);
             url = new URL("http://memgator.cs.odu.edu/timemap/link/" + urir);
             conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestProperty("User-Agent","MobileMink");
             conn.setRequestMethod("GET");
             String memCount = conn.getHeaderField("X-Memento-Count");
 

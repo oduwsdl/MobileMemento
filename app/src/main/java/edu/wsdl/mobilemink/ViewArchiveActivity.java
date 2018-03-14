@@ -254,7 +254,6 @@ public class ViewArchiveActivity extends ActionBarActivity implements AdapterVie
                 ArrayList<MementoGetter> threads = new ArrayList<MementoGetter>();
                 MobileMink.urls.clear();
                 ExecutorService threadPool = Executors.newCachedThreadPool();
-
                 for (int i = 0; i < domains.size(); i++) {
                     MementoGetter thread = new MementoGetter(domains.get(i), (i < 2) ? ScreenType.DESKTOP : ScreenType.PHONE);
                     threads.add(thread);
@@ -291,6 +290,25 @@ public class ViewArchiveActivity extends ActionBarActivity implements AdapterVie
         @Override
         protected void onPostExecute(TimeMap result) {
             timeMap = result;
+            ArrayList<Memento>mems = timeMap.getMementos();
+            // TODO: sanitize TimeMap for duplicates
+            int m=1;
+            int sz = mems.size();
+            while(m < sz) {
+                // Better to use ArrayList.removeIf but it does not appear to be available here
+                Memento m1 = mems.get(m - 1);
+                Memento m2 = mems.get(m);
+                if (m1.getArchiveUrl().equals(m2.getArchiveUrl())) {
+                    // Log.d("mobilemink","removing index "+m);
+                    mems.remove(m); // Remove in-place
+                    sz = mems.size(); // Reset to new size
+                } else {
+                    // Log.d("mobilemink", "1" + m1.getArchiveUrl() + " " + m2.getArchiveUrl());
+                    m++;
+                }
+            }
+            timeMap.setMementos(mems);
+
             adapter.setTimeMap(timeMap);
             dialog.dismiss();
 

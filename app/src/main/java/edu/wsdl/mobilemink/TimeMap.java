@@ -1,5 +1,7 @@
 package edu.wsdl.mobilemink;
 
+import android.util.Log;
+
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,8 +16,7 @@ import java.util.Calendar;
  * A detailed set of <code>Memento</code>s for a given URL. They are sorted by time and screen DPI.
  */
 public class TimeMap implements Comparator<Memento> {
-
-    private static final long cutoff = new Date(98, 0, 1, 12, 1, 32).getTime();
+    // private static final long cutoff = new Date(98, 0, 1, 12, 1, 32).getTime();
     private final ScreenType screenType;
     private String contentUrl;
     private ArrayList<Memento> mementos = new ArrayList<Memento>();
@@ -34,6 +35,7 @@ public class TimeMap implements Comparator<Memento> {
             if(others[0] != null) { // Prevent accessor to invalid TM object
                 this.contentUrl = others[0].contentUrl;
             }
+
             for (TimeMap map : others) {
                 if (map != null) {
                     mementos.addAll(map.getMementos());
@@ -165,6 +167,11 @@ public class TimeMap implements Comparator<Memento> {
     {
         Collections.sort(mementos, this);
         return mementos;
+    }
+
+    protected void setMementos(ArrayList<Memento> mementos)
+    {
+        this.mementos = mementos;
     }
 
     public int getDateIndex(int month, int year)

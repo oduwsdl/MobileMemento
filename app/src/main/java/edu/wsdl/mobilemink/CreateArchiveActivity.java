@@ -73,8 +73,8 @@ public class CreateArchiveActivity extends ActionBarActivity
         threadPool.shutdown();
 
         final ProgressDialog loaderWheel = new ProgressDialog(this);
-        loaderWheel.setTitle("Uploading pages to archives...");
-        loaderWheel.setMessage("Uploading snapshots to severs. (This should take a few seconds)");
+        loaderWheel.setTitle("Archive Now!");
+        loaderWheel.setMessage("Submitting webpage to archive.\n(This should take a few seconds)");
         loaderWheel.show();
 
         new Thread(new Runnable()
@@ -111,7 +111,7 @@ public class CreateArchiveActivity extends ActionBarActivity
                 connection = (HttpURLConnection) new URL(url).openConnection();
                 connection.setRequestMethod("GET");
                 //Toast.makeText(CreateArchiveActivity.this, "Upload finished.", Toast.LENGTH_SHORT).show();
-                Log.d("Request", connection.getResponseCode() + " " + url);
+                // Log.d("Request", connection.getResponseCode() + " " + url);
             } catch (Exception e) {
                 Log.e("Exception", "", e);
                 //Toast.makeText(CreateArchiveActivity.this, "Upload failed!", Toast.LENGTH_SHORT).show();

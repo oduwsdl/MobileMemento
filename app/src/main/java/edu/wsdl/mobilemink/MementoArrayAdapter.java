@@ -11,6 +11,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.text.format.DateUtils;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -27,6 +28,7 @@ public class MementoArrayAdapter extends BaseAdapter {
 
         if(context.getTimeMap() != null) {
             mementos = context.getTimeMap().getMementos();
+            // TODO: Check for IA+AIT duplicate mementos
         }
         else {
             mementos = new ArrayList<Memento>();
@@ -35,6 +37,7 @@ public class MementoArrayAdapter extends BaseAdapter {
 
     public void setTimeMap(TimeMap timeMap) {
         mementos = timeMap.getMementos();
+
         notifyDataSetChanged();
     }
 
