@@ -42,7 +42,7 @@ public final class HttpIO
         StringBuilder result = new StringBuilder();
         try {
             Log.d("MEMENTO_URL", urir);
-            url = new URL("http://memgator.cs.odu.edu/timemap/link/" + urir);
+            url = new URL("https://memgator.cs.odu.edu/timemap/link/" + urir);
             conn = (HttpURLConnection) url.openConnection();
             conn.setRequestProperty("User-Agent","MobileMink");
             conn.setRequestMethod("GET");
