@@ -41,16 +41,14 @@ public final class HttpIO
         String line;
         StringBuilder result = new StringBuilder();
         try {
-            Log.d("URI-R", urir);
+            Log.d("MEMENTO_URL", urir);
             url = new URL("https://memgator.cs.odu.edu/timemap/link/" + urir);
-            Log.d("Aggregator URI", url.toString());
             conn = (HttpURLConnection) url.openConnection();
             conn.setRequestProperty("User-Agent","MobileMink");
             conn.setRequestMethod("GET");
             String memCount = conn.getHeaderField("X-Memento-Count");
 
             rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-
             while ((line = rd.readLine()) != null) {
                 result.append(line).append("\n");
             }

@@ -51,7 +51,9 @@ public class CreateArchiveActivity extends ActionBarActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        //if (id == R.id.action_ok) {}
+        if (id == R.id.action_ok) {
+
+        }
         return super.onOptionsItemSelected(item);
     }
 
