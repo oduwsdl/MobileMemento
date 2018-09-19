@@ -58,12 +58,16 @@ public class ViewArchiveActivity extends ActionBarActivity implements AdapterVie
         Intent i = getIntent();
 
         //If not launched using an implicit ACTION.SEND Intent, quit.
-        if (i.getAction() != Intent.ACTION_SEND) quit();
+        if (!i.getAction().equals(Intent.ACTION_SEND)) {
+            quit();
+        }
 
         //Get the url and title of the web page, quit if they don't exist.
         suppliedUrl = i.getStringExtra(Intent.EXTRA_TEXT);
         webName = i.getStringExtra(Intent.EXTRA_SUBJECT);
-        if(suppliedUrl == null || webName == null) quit();
+        if(suppliedUrl == null || webName == null) {
+            quit();
+        }
 
         //Load the TimeMap for this page in a separate thread, Dummy Content or otherwise. Display
         //a progress wheel while this loads.
@@ -88,7 +92,7 @@ public class ViewArchiveActivity extends ActionBarActivity implements AdapterVie
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if(timeMap != null) {
-                    int index = timeMap.getDateIndex(i, new Integer((String) yearSpinner.getSelectedItem()) - 1900);
+                    int index = timeMap.getDateIndex(i, Integer.valueOf((String) yearSpinner.getSelectedItem()) - 1900);
                     list.setSelection(index);
                 }
             }
@@ -103,7 +107,7 @@ public class ViewArchiveActivity extends ActionBarActivity implements AdapterVie
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(timeMap != null) {
-                    int index = timeMap.getDateIndex(monthSpinner.getSelectedItemPosition(), new Integer((String) yearSpinner.getSelectedItem()) - 1900);
+                    int index = timeMap.getDateIndex(monthSpinner.getSelectedItemPosition(), Integer.valueOf((String) yearSpinner.getSelectedItem()) - 1900);
                     list.setSelection(index);
                 }
             }
