@@ -1,4 +1,4 @@
-package edu.wsdl.mobilemink;
+package edu.odu.cs.wsdl.mobilemink;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
@@ -20,7 +20,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import edu.wsdl.mobilemink.util.HttpIO;
+import edu.odu.cs.wsdl.mobilemink.util.HttpIO;
 
 import java.net.URISyntaxException;
 import java.util.ArrayList;

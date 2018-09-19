@@ -1,4 +1,4 @@
-package edu.wsdl.mobilemink;
+package edu.odu.cs.wsdl.mobilemink;
 
 import android.os.Bundle;
 import android.preference.PreferenceActivity;

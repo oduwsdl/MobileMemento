@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
-    package="edu.wsdl.mobilemink"
+    package="edu.odu.cs.wsdl.mobilemink"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:versionCode="2"
     android:versionName="@string/app_version">

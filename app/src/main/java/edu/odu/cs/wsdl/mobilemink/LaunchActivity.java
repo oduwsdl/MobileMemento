@@ -1,4 +1,4 @@
-package edu.wsdl.mobilemink;
+package edu.odu.cs.wsdl.mobilemink;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;

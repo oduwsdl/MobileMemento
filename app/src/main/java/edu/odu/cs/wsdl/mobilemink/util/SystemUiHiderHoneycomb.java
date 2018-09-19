@@ -1,4 +1,4 @@
-package edu.wsdl.mobilemink.util;
+package edu.odu.cs.wsdl.mobilemink.util;
 
 import android.annotation.TargetApi;
 import android.app.Activity;

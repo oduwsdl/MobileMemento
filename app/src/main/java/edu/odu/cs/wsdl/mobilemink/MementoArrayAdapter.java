@@ -1,4 +1,4 @@
-package edu.wsdl.mobilemink;
+package edu.odu.cs.wsdl.mobilemink;
 
 /**
  * Created by wes on 12/18/14.
@@ -16,7 +16,7 @@ import android.util.Log;
 import java.util.ArrayList;
 
 /**
- * TODO:Document my code? Why do you think they call it "code"?
+ * TODO: Document my code? Why do you think they call it "code"?
  */
 public class MementoArrayAdapter extends BaseAdapter {
 

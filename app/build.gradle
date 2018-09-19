@@ -5,7 +5,7 @@ android {
     buildToolsVersion '25.0.0'
 
     defaultConfig {
-        applicationId "edu.wsdl.mobilemink"
+        applicationId "edu.odu.cs.wsdl.mobilemink"
         minSdkVersion 16
         targetSdkVersion 21
         versionCode 1

@@ -1,4 +1,4 @@
-package edu.wsdl.mobilemink;
+package edu.odu.cs.wsdl.mobilemink;
 
 import java.util.LinkedList;
 
@@ -7,7 +7,7 @@ import java.util.LinkedList;
  */
 public class MobileMink
 {
-    public static final String PREFS = "edu.wsdl.mobilemink_prefs";
+    public static final String PREFS = "edu.odu.cs.wsdl.mobilemink_prefs";
     public static final LinkedList<String> urls = new LinkedList<>();
 
     private MobileMink()

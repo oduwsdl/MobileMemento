@@ -1,4 +1,4 @@
-package edu.wsdl.mobilemink.util;
+package edu.odu.cs.wsdl.mobilemink.util;
 
 import android.app.Activity;
 import android.os.Build;
