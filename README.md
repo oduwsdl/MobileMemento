@@ -3,15 +3,15 @@ An Android Application for viewing and creating archived versions of mobile and 
 
 ## Development
 
-_Notes to come to describe dev process_ (#23)
+_Notes to come to describe dev process_ ([#23](https://github.com/oduwsdl/MobileMink/issues/23))
 
 ## Installation
 
 The app is currently only available via a [beta APK (1.04 MB)](https://github.com/Thing342/MobileMemento/releases/download/0.6/mobileMink-0.6-release.apk) (last updated 8 May 2015 at 12:46 EDT)
 
 ### Tasks
-- [ ] Release APK from this repository (#21)
-- [ ] Explore dynamics of releasing to the Google Play Store to mitigate need for manual APK installation (#24)
+- [ ] Release APK from this repository ([#21](https://github.com/oduwsdl/MobileMink/issues/21))
+- [ ] Explore dynamics of releasing to the Google Play Store to mitigate need for manual APK installation ([#24](https://github.com/oduwsdl/MobileMink/issues/23))
 
 ## More Information and Citing Project
 
