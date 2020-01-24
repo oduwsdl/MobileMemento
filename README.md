@@ -3,7 +3,7 @@ An Android Application for viewing and creating archived versions of mobile and 
 
 ## Development
 
-_Notes to come to describe dev process_
+_Notes to come to describe dev process_ (#23)
 
 ## Installation
 
