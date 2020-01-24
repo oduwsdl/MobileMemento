@@ -3,8 +3,6 @@ An Android Application that bridges the mobile and esktop Webs. MobileMink uses 
 
 ## Usage
 
-_Usage notes to come_ (pending task in [#22](https://github.com/oduwsdl/MobileMink/issues/22))
-
 1. After installing MobileMink, browse to a web page of your choice and select the Share button (Figure 1).
 2. Select the option to "View Mementos" from the list of "Share via" (Figure 2).
 3. View the dates for which mementos (past representations) of the web page are available with the mobile or desktop representation iconically noted (Figure 3).
