@@ -11,7 +11,7 @@ The app is currently only available via a [beta APK (1.04 MB)](https://github.co
 
 ### Tasks
 - [ ] Release APK from this repository (#21)
-- [ ] Explore dynamics of releasing to the Google Play Store to mitigate need for manual APK installation
+- [ ] Explore dynamics of releasing to the Google Play Store to mitigate need for manual APK installation (#24)
 
 ## More Information and Citing Project
 
