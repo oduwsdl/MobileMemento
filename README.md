@@ -1,9 +1,18 @@
 # MobileMink
-An Android Application for viewing and creating archived versions of mobile and desktop Web pages using the [Memento Framework](https://tools.ietf.org/html/rfc7089).
+An Android Application that bridges the mobile and esktop Webs. MobileMink uses URI permutations to discover mobile and desktop version of the same resources and provides the user an aggregate TimeMap of mobile and desktop mementos. It also provides the opportunity to submit the mobile and desktop URI-Rs to the Save Page Now service at the Internet Archive and archive.today. MobileMink relies on the [Memento Framework](https://tools.ietf.org/html/rfc7089).
 
 ## Usage
 
 _Usage notes to come_ (pending task in [#22](https://github.com/oduwsdl/MobileMink/issues/22))
+
+1. After installing MobileMink, browse to a web page of your choice and select the Share button (Figure 1).
+2. Select the option to "View Mementos" from the list of "Share via" (Figure 2).
+3. View the dates for which mementos (past representations) of the web page are available with the mobile or desktop representation iconically noted (Figure 3).
+4. Alternatively, submit the URI-R of the web page to a selection of available web archiving services (Figure 4).
+
+<img src="meta/share.png" width="200" alt="Figure 1">|<img src="meta/viewmems.png" width="200" alt="Figure 2">|<img src="meta/timemap_v1.png" width="200" alt="Figure 3">|<img src="meta/submit.png" width="200" alt="Figure 4">
+:--:|:--:|:--:|:--:
+Figure 1|Figure 2|Figure 3|Figure4
 
 ## Development
 
