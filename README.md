@@ -3,7 +3,7 @@ An Android Application for viewing and creating archived versions of mobile and 
 
 ## Usage
 
-_Usage notes to come_
+_Usage notes to come_ (pending task in [#22](https://github.com/oduwsdl/MobileMink/issues/22))
 
 ## Development
 
