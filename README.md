@@ -7,7 +7,7 @@ _Usage notes to come_ (pending task in [#22](https://github.com/oduwsdl/MobileMi
 
 ## Development
 
-_Notes to come to describe dev process_ ([#23](https://github.com/oduwsdl/MobileMink/issues/23))
+_Notes to come to describe dev process_ ([#23](https://github.com/oduwsdl/MobileMink/issues/23), [#18](https://github.com/oduwsdl/MobileMink/issues/18))
 
 ## Installation
 
