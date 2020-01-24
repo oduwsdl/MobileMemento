@@ -1,6 +1,10 @@
 # MobileMink
 An Android Application for viewing and creating archived versions of mobile and desktop Web pages using the [Memento Framework](https://tools.ietf.org/html/rfc7089).
 
+## Usage
+
+_Usage notes to come_
+
 ## Development
 
 _Notes to come to describe dev process_ ([#23](https://github.com/oduwsdl/MobileMink/issues/23))
