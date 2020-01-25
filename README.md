@@ -10,7 +10,7 @@ An Android Application that bridges the mobile and esktop Webs. MobileMink uses 
 
 <img src="meta/share.png" width="200" alt="Figure 1">|<img src="meta/viewmems.png" width="200" alt="Figure 2">|<img src="meta/timemap_v1.png" width="200" alt="Figure 3">|<img src="meta/submit.png" width="200" alt="Figure 4">
 :--:|:--:|:--:|:--:
-Figure 1|Figure 2|Figure 3|Figure4
+Figure 1|Figure 2|Figure 3|Figure 4
 
 ## Development
 
