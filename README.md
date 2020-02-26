@@ -1,5 +1,5 @@
 # MobileMink
-An Android Application that bridges the mobile and esktop Webs. MobileMink uses URI permutations to discover mobile and desktop version of the same resources and provides the user an aggregate TimeMap of mobile and desktop mementos. It also provides the opportunity to submit the mobile and desktop URI-Rs to the Save Page Now service at the Internet Archive and archive.today. MobileMink relies on the [Memento Framework](https://tools.ietf.org/html/rfc7089).
+An Android Application that bridges the mobile and desktop Webs. MobileMink uses URI permutations to discover mobile and desktop version of the same resources and provides the user an aggregate TimeMap of mobile and desktop mementos. It also provides the opportunity to submit the mobile and desktop URI-Rs to the Save Page Now service at the Internet Archive and archive.today. MobileMink relies on the [Memento Framework](https://tools.ietf.org/html/rfc7089).
 
 ## Usage
 
